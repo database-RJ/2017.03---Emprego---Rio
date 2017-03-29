@@ -28,4 +28,4 @@ Os dados foram pre-processados e visualizados em R. O script usado está dispon�
 
 ## Fonte:
 
-[CAGED](http://bi.mte.gov.br/eec/pages/consultas/evolucaoEmprego/consultaEvolucaoEmprego.xhtml#relatorioSetor)
+CAGED, via [Armazém de Dados](http://www.armazemdedados.rio.rj.gov.br/)
