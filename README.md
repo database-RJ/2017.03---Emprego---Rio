@@ -10,7 +10,7 @@ blablabla
 
 ###### Saldo por tipo de emprego
 
-![alt text](plots_raw/extrativa_mineral.png)
+![alt text](plots_raw/extrativ_mineral.png)
 ![alt text](plots_raw/industria_de_transformacao.png)
 ![alt text](plots_raw/servico_de_utilidade_publica.png)
 ![alt text](plots_raw/construcao_civil.png)
