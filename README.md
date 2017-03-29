@@ -23,7 +23,7 @@ blablabla
 
 ##Metodologia
 
-Os dados foram pre-processados e visualizados em R. O script usado está disponível aqui [links](https://drive.google.com/drive/folders/0B5p2DfLvQ-6RZ3Z0azlLeTljLWc?usp=sharing).
+Os dados foram pre-processados e visualizados em R. O script usado está disponível [aqui](https://github.com/database-RJ/2017.03---Emprego---Rio/blob/master/admissao_desligamento.R).
 
 
 ##Fonte:
