@@ -29,3 +29,4 @@ Os dados foram pre-processados e visualizados em R. O script usado está dispon�
 ## Fonte:
 
 CAGED, via [Armazém de Dados](http://www.armazemdedados.rio.rj.gov.br/)
+[link fixo pra tabela](http://www.armazemdedados.rio.rj.gov.br/arquivos/3175_cagedfev17.XLS)
