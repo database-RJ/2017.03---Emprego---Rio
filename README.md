@@ -6,7 +6,14 @@
 ## Analise
 #### bablabla:
 
-blablabla
+[Como tem andando a taxa de empregos na cidade do Rio de Janeiro?]
+
+Se tomarmos a área de construção civil como parâmetro para medir a taxa de empregos no Rio de Janeiro, observaremos um enorme e crescente declínio no último ano. 
+
+Apesar dos discursos que impulsionaram a realização de mega eventos esportivos, que prometiam empregos duradouros e uma taxa de empregabilidade crescente, após o término das obras de infraestrutura observamos uma grande taxa de desemprego.  
+
+Essa queda também se manifesta em diversos outros setores, como serviços, indústria de transformação e comércio. 
+
 
 ###### Saldo por tipo de emprego
 
