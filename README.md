@@ -18,13 +18,13 @@ Essa queda também se manifesta em diversos outros setores, como serviços, ind�
 ###### Saldo por tipo de emprego
 
 
-![alt text](plots_raw/industria_de_transformacao.png)
-![alt text](plots_raw/servico_de_utilidade_publica.png)
-![alt text](plots_raw/construção_civil.png)
-![alt text](plots_raw/comercio.png)
-![alt text](plots_raw/servicos.png)
-![alt text](plots_raw/extrativ_mineral.png)
-![alt text](plots_raw/agropecuaria.png)
+![alt text](plots/industria_de_transformacao.png)
+![alt text](plots/servico_de_utilidade_publica.png)
+![alt text](plots/construção_civil.png)
+![alt text](plots/comercio.png)
+![alt text](plots/servicos.png)
+![alt text](plots/extrativ_mineral.png)
+![alt text](plots/agropecuaria.png)
 
 
 
