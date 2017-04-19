@@ -66,56 +66,106 @@ emprego_saldo$data <- seq(as.Date("2000/1/1"), as.Date("2017/1/1"), by = "month"
 ######### VIZ ##########
 ########################
 
+# Palette
+LtoM <-colorRampPalette(c('red', 'yellow' ))
+Mid <- "snow3"
+MtoH <-colorRampPalette(c('lightgreen', 'darkgreen'))
+
+#plot
+ggplot(data = emprego_saldo, aes(x = emprego_saldo[,1], y = emprego_saldo[,13], fill=emprego_saldo[,13])) +
+  geom_bar(stat = 'identity')+ 
+  scale_fill_gradient2(low=LtoM(100), mid='snow3', high=MtoH(100), space='Lab')+
+  theme_bw()+xlab("DATA")+ylab("SALDO DE CONTRATAÇÃO")+ggtitle("CONSTRUÇÃO CIVIL")+ theme(legend.position="none")
+ggsave("./plots/post.png", width = 20, height = 10, units = "cm")
+
+ggplot(data = emprego_saldo, aes(x = emprego_saldo[,1], y = emprego_saldo[,4], fill=emprego_saldo[,4])) +
+  geom_bar(stat = 'identity')+ 
+  scale_fill_gradient2(low=LtoM(100), mid='snow3', high=MtoH(100), space='Lab')+
+  theme_bw()+xlab("data")+ylab("saldo de contratações")+ggtitle("Extrativa Mineral")+ theme(legend.position="none")
+ggsave("./plots/extrativa_mineral.png", width = 15, height = 10, units = "cm")
+
+ggplot(data = emprego_saldo, aes(x = emprego_saldo[,1], y = emprego_saldo[,7], fill=emprego_saldo[,7])) +
+  geom_bar(stat = 'identity')+ 
+  scale_fill_gradient2(low=LtoM(100), mid='snow3', high=MtoH(100), space='Lab')+
+  theme_bw()+xlab("data")+ylab("saldo de contratações")+ggtitle("Industria de Transformação")+ theme(legend.position="none")
+ggsave("./plots/industria_de_transformacao.png", width = 15, height = 10, units = "cm")
+
+
+ggplot(data = emprego_saldo, aes(x = emprego_saldo[,1], y = emprego_saldo[,10], fill=emprego_saldo[,10])) +
+  geom_bar(stat = 'identity')+ 
+  scale_fill_gradient2(low=LtoM(100), mid='snow3', high=MtoH(100), space='Lab')+
+  theme_bw()+xlab("data")+ylab("saldo de contratações")+ggtitle("Servico de Utilidade Pública")+ theme(legend.position="none")
+ggsave("./plots/servico_de_utilidade_publica.png", width = 15, height = 10, units = "cm")
+
+
+ggplot(data = emprego_saldo, aes(x = emprego_saldo[,1], y = emprego_saldo[,13], fill=emprego_saldo[,13])) +
+  geom_bar(stat = 'identity')+ 
+  scale_fill_gradient2(low=LtoM(100), mid='snow3', high=MtoH(100), space='Lab')+
+  theme_bw()+xlab("data")+ylab("saldo de contratações")+ggtitle("Construção Civil")+ theme(legend.position="none")
+ggsave("./plots/construção_civil.png", width = 15, height = 10, units = "cm")
+
+ggplot(data = emprego_saldo, aes(x = emprego_saldo[,1], y = emprego_saldo[,16], fill=emprego_saldo[,16])) +
+  geom_bar(stat = 'identity')+ 
+  scale_fill_gradient2(low=LtoM(100), mid='snow3', high=MtoH(100), space='Lab')+
+  theme_bw()+xlab("data")+ylab("saldo de contratações")+ggtitle("Comércio")+ theme(legend.position="none")
+ggsave("./plots/comercio.png", width = 15, height = 10, units = "cm")
+
+
+ggplot(data = emprego_saldo, aes(x = emprego_saldo[,1], y = emprego_saldo[,19], fill=emprego_saldo[,19])) +
+  geom_bar(stat = 'identity')+ 
+  scale_fill_gradient2(low=LtoM(100), mid='snow3', high=MtoH(100), space='Lab')+
+  theme_bw()+xlab("data")+ylab("saldo de contratações")+ggtitle("Serviços")+ theme(legend.position="none")
+ggsave("./plots/servicos.png", width = 15, height = 10, units = "cm")
+
+
+ggplot(data = emprego_saldo, aes(x = emprego_saldo[,1], y = emprego_saldo[,22], fill=emprego_saldo[,22])) +
+  geom_bar(stat = 'identity')+ 
+  scale_fill_gradient2(low=LtoM(100), mid='snow3', high=MtoH(100), space='Lab')+
+  theme_bw()+xlab("data")+ylab("saldo de contratações")+ggtitle("Administração Pública")+ theme(legend.position="none")
+ggsave("./plots/extrativa_mineral.png", width = 15, height = 10, units = "cm")
+
+ggplot(data = emprego_saldo, aes(x = emprego_saldo[,1], y = emprego_saldo[,25], fill=emprego_saldo[,25])) +
+  geom_bar(stat = 'identity')+ 
+  scale_fill_gradient2(low=LtoM(100), mid='snow3', high=MtoH(100), space='Lab')+
+  theme_bw()+xlab("data")+ylab("Agropecuária")+ggtitle("Agropecuária")+ theme(legend.position="none")
+ggsave("./plots/agropecuaria.png", width = 15, height = 10, units = "cm")
+
+
+
+
+
+
+## lines ##
+
 ggplot(emprego_saldo)+
   geom_line(aes(emprego_saldo[,1],emprego_saldo[,4]))+ 
-  ggtitle(colnames(emprego_saldo)[4])+
   theme_bw()+xlab("data")+ylab("saldo de contratações")+ggtitle("Extrativa Mineral")
-ggsave("./plots_raw/extrativa_mineral.png", width = 15, height = 10, units = "cm")
 
 ggplot(emprego_saldo)+
   geom_line(aes(emprego_saldo[,1],emprego_saldo[,7]))+ 
-  ggtitle(colnames(emprego_saldo)[7])+
   theme_bw()+xlab("data")+ylab("saldo de contratações")+ggtitle("Industria de Transformação")
-ggsave("./plots_raw/industria_de_transformacao.png", width = 15, height = 10, units = "cm")
 
 ggplot(emprego_saldo)+
   geom_line(aes(emprego_saldo[,1],emprego_saldo[,10]))+ 
-  ggtitle(colnames(emprego_saldo)[10])+
   theme_bw()+xlab("data")+ylab("saldo de contratações")+ggtitle("Servico de Utilidade Pública")
-ggsave("./plots_raw/servico_de_utilidade_publica.png", width = 15, height = 10, units = "cm")
-
-
 
 ggplot(emprego_saldo)+
   geom_line(aes(emprego_saldo[,1],emprego_saldo[,13]))+ 
-  #geom_vline(xintercept = emprego_saldo[200,1]) +
-  ggtitle(colnames(emprego_saldo)[13])+
   theme_bw()+xlab("data")+ylab("saldo de contratações")+ggtitle("Construção Civil")
-ggsave("./plots_raw/construção_civil.png", width = 15, height = 10, units = "cm")
 
 ggplot(emprego_saldo)+
   geom_line(aes(emprego_saldo[,1],emprego_saldo[,16]))+ 
-  ggtitle(colnames(emprego_saldo)[16])+
   theme_bw()+xlab("data")+ylab("saldo de contratações")+ggtitle("Comércio")
-ggsave("./plots_raw/comercio.png", width = 15, height = 10, units = "cm")
-
 
 ggplot(emprego_saldo)+
   geom_line(aes(emprego_saldo[,1],emprego_saldo[,19]))+ 
-  ggtitle(colnames(emprego_saldo)[19])+
   theme_bw()+xlab("data")+ylab("saldo de contratações")+ggtitle("Serviços")
-ggsave("./plots_raw/servicos.png", width = 15, height = 10, units = "cm")
-
 
 ggplot(emprego_saldo)+
   geom_line(aes(emprego_saldo[,1],emprego_saldo[,22]))+ 
-  ggtitle(colnames(emprego_saldo)[22])+
   theme_bw()+xlab("data")+ylab("saldo de contratações")+ggtitle("Administração Pública")
-ggsave("./plots_raw/extrativa_mineral.png", width = 15, height = 10, units = "cm")
 
 ggplot(emprego_saldo)+
   geom_line(aes(emprego_saldo[,1],emprego_saldo[,25]))+ 
-  ggtitle(colnames(emprego_saldo)[25])+
   theme_bw()+xlab("data")+ylab("Agropecuária")+ggtitle("Agropecuária")
-ggsave("./plots_raw/agropecuaria.png", width = 15, height = 10, units = "cm")
 
